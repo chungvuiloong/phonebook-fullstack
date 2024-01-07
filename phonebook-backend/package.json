@@ -1,0 +1,24 @@
+{
+  "name": "phonebook-backend",
+  "version": "1.0.0",
+  "description": "Backend for phonebook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "remove": "rm -rf ../phonebook-frontend/build && rm -rf ../phonebook-backend/build",
+    "build:ui": "npm run remove && cd ../phonebook-frontend/ && npm run build && cp -r build ../phonebook-backend",
+    "deploy": "npm run build:ui && git add . && git push"
+  },
+  "author": "MrJay",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
