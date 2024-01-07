@@ -18,7 +18,7 @@ const App = () => {
         .then(person => {
             setPersons(person)
         })
-    }, [setPersons])
+    }, [persons, setPersons])
 
     const nameChangeHandler = (e) => {
         e.preventDefault();
